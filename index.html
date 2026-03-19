@@ -205,6 +205,23 @@
             }, 500);
         });
     </script>
+<script>
+const nomes = ["Maria", "João", "Ana", "Carlos", "Fernanda", "Lucas"];
+const valores = ["R$25", "R$50", "R$100", "R$75"];
 
+function notificar() {
+  const nome = nomes[Math.floor(Math.random() * nomes.length)];
+  const valor = valores[Math.floor(Math.random() * valores.length)];
+
+  iziToast.show({
+    title: 'Doação recebida 💚',
+    message: `${nome} acabou de doar ${valor}`,
+    position: 'bottomLeft',
+    timeout: 5000
+  });
+}
+
+setInterval(notificar, 4000);
+</script>
 </body>
 </html>
